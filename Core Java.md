@@ -14,3 +14,30 @@
 *   What is a ClassLoader? (33:20)
 *   Interface vs. Abstract class (33:41)
 *   What is a marker interface? (34:09)
+
+
+# final
+ =>class: no inheritance
+ =>method: no overring
+ =>variable:: value cannot change
+
+ # static:
+ class: top-level(first/start level) ==> no
+        but inside nested classes we can use like ( java main class code)
+        method: belong to class not object, call by className,override  not
+        variable:one copy in memory
+
+# Lambda :
+  =>short form of method
+  =>pass function as value
+  =>store function as variable
+  =>anonymous function
+  =>mostly used in functional interface
+
+  # string :
+  => Store text data
+  =>immutable
+  =>String obj.=> with "new"
+
+  
+        

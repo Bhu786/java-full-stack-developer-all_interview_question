@@ -1,13 +1,24 @@
 # 1. in user service duplication issues occur
 
-"How did you find the issue?"
+# "How did you find the issue?"
 
-"What logs did you check?"
+# "What logs did you check?"
 
-"How did you know it was the database?"
+# "How did you know it was the database?"
 
-"What did you do if the service was down?"
+# "What did you do if the service was down?"
 
-"How did you monitor it?"
+# "How did you monitor it?"
 
-"What was your exact responsibility?"
+# "What was your exact responsibility?"
+
+
+
+
+
+
+
+
+
+
+

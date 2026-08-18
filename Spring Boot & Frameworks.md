@@ -1,0 +1,15 @@
+
+**Spring Boot & Frameworks**
+*   Where does Spring Security fit in the flow? (6:33)
+*   How does Spring decide which controller method to call? (7:41)
+*   Where do filters fit and can they be bypassed? (8:56)
+*   Exception handling mechanism (10:04)
+*   Difference between filter and interceptor (11:04)
+*   Where does serialization/deserialization happen? (12:22)
+*   Difference between authentication and authorization (13:28)
+*   What is auto-configuration? (14:27)
+*   Difference between component, service, and repository (14:59)
+*   What is dependency injection? (15:42)
+*   Why is constructor injection recommended? (16:18)
+*   Difference between @Controller and @RestController (17:28)
+*   What is Spring Data JPA? (18:59)

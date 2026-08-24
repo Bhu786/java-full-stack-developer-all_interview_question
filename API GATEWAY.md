@@ -343,3 +343,148 @@ That is a strong interview answer.
 ![](./apigateway2.png)
 
 ========================================
+
+# API Gateway — Other Capabilities
+
+Apart from **Routing**, API Gateway provides several other capabilities.
+
+## 1. API Composition
+
+### Problem
+
+Suppose the client is visiting the **"My Orders"** page.
+
+A mobile client may need:
+
+```text
+Mobile Device Client
+        |
+        v
+      REST APIs
+        |
+        +----> API to fetch Product Details
+        |
+        +----> API to fetch Invoice Details
+```
+
+A PC client may need even more APIs:
+
+```text
+PC Device Client
+        |
+        v
+      REST APIs
+        |
+        +----> API to fetch Product Details
+        |
+        +----> API to fetch Invoice Details
+        |
+        +----> API to fetch Ratings and Reviews
+        |
+        +----> API to fetch Recommendations
+```
+
+### Without API Composition
+
+The client has to make multiple API calls itself:
+
+```text
+Client
+  |
+  +----> Product API
+  |
+  +----> Invoice API
+  |
+  +----> Ratings & Reviews API
+  |
+  +----> Recommendation API
+```
+
+This makes the client's job more complicated.
+
+---
+
+## API Composition with API Gateway
+
+The **API Gateway makes the client's life easier** through API Composition.
+
+The client makes **one request**:
+
+```text
+Client
+  |
+  | /api/myOrder
+  v
+API Gateway
+```
+
+The API Gateway then calls multiple backend systems:
+
+```text
+                         +----> Product System
+                         |
+Client ---> API Gateway -+----> Invoice System
+                         |
+                         +----> Ratings and Review System
+                         |
+                         +----> Recommendation System
+```
+
+The gateway:
+
+1. Receives the client's request.
+2. Calls multiple backend services.
+3. Fetches the required details.
+4. Joins/combines the responses.
+5. Returns a single response to the client.
+
+### Simple Example
+
+```text
+Client
+  |
+  | GET /api/myOrder
+  v
+API Gateway
+  |
+  +----> Product System       → Product details
+  |
+  +----> Invoice System       → Invoice details
+  |
+  +----> Ratings System       → Ratings/reviews
+  |
+  +----> Recommendation       → Recommendations
+  |
+  v
+Combined Response
+  |
+  v
+Client
+```
+
+### Interview Definition
+
+> **API Composition is a capability of an API Gateway where the gateway calls multiple backend services, combines their responses, and returns a single aggregated response to the client.**
+
+### Remember
+
+**Without API Composition:**
+
+```text
+Client → Multiple APIs
+```
+
+**With API Composition:**
+
+```text
+Client → API Gateway → Multiple Services
+                     ↓
+              Combined Response
+                     ↓
+                   Client
+```
+====================================================
+====================
+
+![](.apigateway3.png)
+============================

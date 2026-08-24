@@ -486,8 +486,10 @@ Client → API Gateway → Multiple Services
 ====================================================
 ====================
 
-![](.apigateway3.png)
+![](./apigateway3.png)
 ============================
-![](.apigateway4.png)
+![](./apigateway4.png)
 ============================
-
+![](./apigateway5.png)
+![](./apigateway6.png)
+=================================

@@ -191,7 +191,7 @@ And:
 The gateway is usually **deployed as multiple instances behind a load-balancing/scaling layer**, so there is no single point of failure.
 
 ============================================
-
+![](./api1image.png)
 
 
 
@@ -332,7 +332,14 @@ So:
 
 ### Interview definition 🎯
 
+===============================================
+
+
 > **API Gateway is a single logical entry point for clients in a microservices architecture. It receives client requests, performs cross-cutting concerns such as authentication, authorization and rate limiting, and routes each request to the appropriate backend microservice.**
 
 That is a strong interview answer.
 ============================================
+
+![](./apigateway2.png)
+
+========================================

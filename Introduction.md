@@ -36,7 +36,125 @@ Apart from development activities, I also participate in production release acti
 
 So overall, I am involved in the complete software development lifecycle, starting from requirement understanding and technical design to development, testing, CI/CD deployment, UAT, production release, and production support
 
+=====================================================================
+# 👨‍💻 Tell Me About Yourself — Ashok
 
+> **Experience:** 5+ Years  
+> **Role:** Java Full Stack Developer  
+> **Domain:** Banking / Credit Card  
+> **Current Area:** Credit Servicing Layer
+
+---
+
+## 1. 👋 Introduction
+
+- My name is **Ashok**
+- **5+ years of experience** as a Java Full Stack Developer
+- Currently working in the **Banking Sector**
+
+### My overall experience
+
+**Java Full Stack Development**
+→ Backend Development  
+→ Frontend Development  
+→ Microservices  
+→ Database  
+→ Testing  
+→ CI/CD  
+→ Deployment  
+→ Production Support
+
+---
+
+# 2. 🛠️ Technical Skills
+
+## Backend
+
+- Java
+- J2EE
+- Spring
+- Spring Boot
+- REST APIs
+- Microservices
+
+## Frontend
+
+- Frontend technologies used in the project
+- Responsible for frontend + backend development
+
+## Database
+
+- Oracle
+- MongoDB
+
+## ☁️ AWS
+
+- EC2
+- S3
+- RDS
+- Route 53
+- VPC
+
+## 🚀 DevOps
+
+- Git
+- Maven
+- Jenkins
+- SonarQube
+- Nexus
+- Docker
+- Kubernetes
+
+## 🧪 Testing
+
+- Unit Testing
+- Code Review
+- Integration Testing
+- Functional Testing
+- UAT
+
+---
+
+# 3. 🏦 Current Project
+
+## Domain
+
+**Banking / Credit Card**
+
+## My Module
+
+**Credit Servicing Layer**
+
+### Main Responsibilities of the Application
+
+- Customer / Citizen eligibility determination
+- Credit card operations
+- Credit card transactions
+- Bill generation
+- Statement generation
+- Due-date reminders
+- Customer notifications
+
+### Simple Project Flow
+
+```text
+Customer
+   ↓
+Credit Card Application
+   ↓
+Eligibility
+   ↓
+Credit Servicing
+   ↓
+Transactions
+   ↓
+Bill Generation
+   ↓
+Statement
+   ↓
+Due Reminder / Notification
+
+================================================================================
 
 
 

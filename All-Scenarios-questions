@@ -1,0 +1,408 @@
+
+Absolutely. For a **Java Full Stack Developer with ~5 years experience**, I would not limit preparation to the 15 scenarios you already have.
+
+A strong interview can move from:
+
+**Core Java → Spring → Spring Boot → REST → JPA/DB → Microservices → Kafka → Security → Testing → React → AWS/Docker/K8s → CI/CD → Observability → System Design → Production scenarios.**
+
+Recent full-stack interview reports also show this broader mix: Core Java/JVM, Spring Boot/Security, REST, microservices, SQL/JPA, React, cloud/deployment, system design and production scenarios. ([LinkedIn][1])
+
+## 🎯 I would build your master bank as ~200 scenario questions
+
+Not 200 random questions. **Grouped by topic**, so you can make a proper mind map.
+
+---
+
+# 1. Core Java — 25 Scenarios
+
+### OOP / Design
+
+1. A class has too many responsibilities. How would you redesign it?
+2. When would you prefer composition over inheritance?
+3. How would you make a class immutable?
+4. Your immutable class contains a mutable `List`. What problem can occur?
+5. When would you use an interface vs abstract class?
+6. How would you apply SOLID principles to a real banking application?
+
+### `equals()` / `hashCode()`
+
+7. Two objects have the same data but `HashSet` stores both. Why?
+8. You override `equals()` but not `hashCode()`. What happens?
+9. `hashCode()` always returns `1`. Will `HashMap` still work?
+10. An object used as a `HashMap` key is modified after insertion. What happens?
+11. Why should immutable objects preferably be used as HashMap keys?
+
+### Collections
+
+12. Your HashMap contains millions of records and becomes slow. What would you investigate?
+13. Multiple threads are modifying a HashMap. What can happen?
+14. When would you use `ConcurrentHashMap`?
+15. You need insertion order. Which collection would you use?
+16. You need sorted data. Which collection would you choose?
+17. You frequently search by key. Which collection is appropriate?
+18. ArrayList performance becomes poor because of frequent insertions. What would you consider?
+
+### Java 8+
+
+19. A Stream pipeline is processing millions of records slowly. How would you optimize it?
+20. When would you avoid `parallelStream()`?
+21. You need to group employees by department. How would you implement it?
+22. You need the first non-repeated character. How would you solve it?
+23. You need to process a huge file without loading everything into memory. How?
+24. When would you use `Optional` and when would you avoid it?
+25. A lambda captures a variable. What restrictions apply?
+
+---
+
+# 2. Java Concurrency & Multithreading — 20
+
+26. 1,000 requests arrive simultaneously. How does Java handle the threads?
+27. Your application thread pool is exhausted. How do you troubleshoot?
+28. Two threads update the same account balance. What can go wrong?
+29. When would you use `synchronized`?
+30. `volatile` vs `synchronized` — when would you use each?
+31. Multiple threads need to increment a counter. What solution would you use?
+32. When would you use `AtomicInteger`?
+33. Two threads are waiting for each other. How do you identify deadlock?
+34. How would you prevent deadlock?
+35. CPU reaches 100% because of Java threads. How would you investigate?
+36. A thread is stuck for several minutes. How would you debug it?
+37. When would you use `ExecutorService`?
+38. Fixed thread pool vs cached thread pool?
+39. Your async tasks are creating too many threads. How do you control them?
+40. `CompletableFuture` tasks are running slowly. How would you troubleshoot?
+41. When would you use `Future` vs `CompletableFuture`?
+42. How would you execute multiple independent API calls in parallel?
+43. What happens if one `CompletableFuture` fails?
+44. How do you implement timeout for an asynchronous operation?
+45. How can thread-local data cause problems?
+46. What is the difference between platform threads and virtual threads?
+
+---
+
+# 3. JVM / Garbage Collection / Memory — 15
+
+47. Application suddenly throws `OutOfMemoryError`. What do you check?
+48. Heap usage continuously increases. How do you identify a memory leak?
+49. CPU suddenly increases because of GC. What would you check?
+50. What is the difference between heap and stack?
+51. What happens when Young Generation becomes full?
+52. What happens during Old Generation GC?
+53. How would you take a heap dump?
+54. How would you analyze a heap dump?
+55. What objects commonly cause memory leaks?
+56. Static collections are continuously growing. What problem can occur?
+57. A cache consumes most of the heap. How would you fix it?
+58. How would you investigate frequent Full GC?
+59. Why does increasing heap size not always solve memory problems?
+60. How would you monitor JVM memory in production?
+61. What JVM metrics would you expose to Prometheus/Grafana?
+
+---
+
+# 4. Spring Core — 15
+
+62. Two beans of the same type exist. Which one gets injected?
+63. How would you resolve multiple beans?
+64. `@Primary` vs `@Qualifier`?
+65. How does Spring Dependency Injection work?
+66. What happens during Spring bean creation?
+67. What is the bean lifecycle?
+68. What happens if a singleton bean depends on a prototype bean?
+69. When would you use `@Bean` instead of `@Component`?
+70. What happens if two beans have circular dependency?
+71. How would you solve circular dependency?
+72. Singleton vs prototype scope?
+73. What is Spring AOP?
+74. Where would you use AOP in a real project?
+75. Why does Spring use proxies?
+76. What problem occurs with self-invocation in Spring?
+
+---
+
+# 5. Spring Boot — 20
+
+77. What happens internally when Spring Boot starts?
+78. How does auto-configuration work?
+79. Your application starts but a bean is missing. How do you troubleshoot?
+80. Application startup takes 2 minutes. How would you investigate?
+81. How do Spring Profiles work?
+82. Dev configuration works but production configuration doesn't. What do you check?
+83. How do you externalize configuration?
+84. Where would you store passwords/secrets?
+85. How would you create a custom starter?
+86. How do you disable a particular auto-configuration?
+87. What is Spring Boot Actuator?
+88. Which Actuator endpoints would you expose in production?
+89. How would you implement global exception handling?
+90. `@ControllerAdvice` vs local `@ExceptionHandler`?
+91. How would you validate REST request data?
+92. How do you return proper validation errors?
+93. How would you implement correlation IDs?
+94. How would you add logging without duplicating code?
+95. How would you monitor Spring Boot application health?
+96. Application starts successfully but immediately becomes unhealthy. How would you troubleshoot?
+
+---
+
+# 6. REST API — 15
+
+97. Design an API for creating an order.
+98. Client sends the same POST twice. How do you prevent duplicate creation?
+99. Which HTTP status should be returned after successful creation?
+100. How would you implement pagination?
+101. How would you implement filtering and sorting?
+102. API response contains too much data. How would you optimize it?
+103. API versioning is required. How would you implement it?
+104. How would you design a consistent error response?
+105. PUT vs PATCH in a real application?
+106. How do you make an API idempotent?
+107. API suddenly receives 10× normal traffic. What would you do?
+108. API takes 8 seconds to respond. How would you troubleshoot?
+109. How would you protect an API from abuse?
+110. How would you implement rate limiting?
+111. How would you handle backward compatibility?
+
+---
+
+# 7. Database / SQL — 20
+
+112. Query suddenly becomes slow. How do you investigate?
+113. Database CPU reaches 100%. What do you check?
+114. Connection pool is exhausted. What do you check?
+115. How do indexes improve performance?
+116. An index exists but the query is still slow. Why?
+117. When can indexes actually hurt performance?
+118. How would you identify slow queries?
+119. What is an execution plan?
+120. Two transactions update the same row. What can happen?
+121. Optimistic vs pessimistic locking?
+122. How do you prevent duplicate records?
+123. How do database transactions work?
+124. What are isolation levels?
+125. Dirty read vs non-repeatable read vs phantom read?
+126. How would you handle deadlocks?
+127. How would you migrate a huge database table safely?
+128. How would you paginate millions of database records?
+129. Offset pagination vs keyset pagination?
+130. How would you archive old data?
+131. How would you handle database failure?
+132. How would you perform zero-downtime database migration?
+
+---
+
+# 8. Hibernate / JPA — 15
+
+133. What is the N+1 query problem?
+134. How would you identify N+1 queries?
+135. How would you fix N+1?
+136. Lazy vs eager loading?
+137. Lazy loading causes `LazyInitializationException`. Why?
+138. Entity contains 20 fields but API needs only 3. What would you do?
+139. Entity relationships become very slow. How would you investigate?
+140. `save()` creates duplicate records. Why?
+141. What is persistence context?
+142. What is dirty checking?
+143. How does Hibernate caching work?
+144. First-level vs second-level cache?
+145. When would you use DTOs?
+146. Entity returned directly from REST API causes problems. Why?
+147. Hibernate query consumes huge memory. How would you process it efficiently?
+
+---
+
+# 9. Spring Transactions — 10
+
+148. Transaction partially succeeds but rollback doesn't happen.
+149. Checked exception occurs but transaction doesn't rollback. Why?
+150. `@Transactional` doesn't work. What could be wrong?
+151. Self-invocation causes transaction problems. Explain.
+152. Transaction takes too long. What are the risks?
+153. Database call occurs inside a transaction and downstream API takes 10 seconds. What problem can happen?
+154. Should external API calls happen inside DB transactions?
+155. How would you handle transaction across two microservices?
+156. Why can't normal DB transactions easily span microservices?
+157. Saga vs distributed transaction?
+
+---
+
+# 10. Microservices Architecture — 20
+
+158. When would you choose microservices over monolith?
+159. How would you identify service boundaries?
+160. Should every microservice have its own database?
+161. Two services need the same data. What would you do?
+162. One service is down. What happens to dependent services?
+163. One service becomes slow. How do you prevent cascading failure?
+164. How would services discover each other?
+165. What is Service Discovery?
+166. Client-side vs server-side load balancing?
+167. API Gateway becomes unavailable. What happens?
+168. How would you secure communication between services?
+169. REST vs messaging between services?
+170. Synchronous vs asynchronous communication?
+171. How would you handle distributed transactions?
+172. What is Saga pattern?
+173. Choreography vs orchestration?
+174. How would you maintain data consistency across services?
+175. How would you deploy one service without affecting others?
+176. How would you handle backward compatibility between services?
+177. How would you prevent a shared database from tightly coupling services?
+
+---
+
+# 11. Microservices Resilience — 15
+
+178. Downstream service takes 10 seconds.
+179. Downstream service is completely unavailable.
+180. Retry makes the outage worse.
+181. What is retry storm?
+182. When should you NOT retry?
+183. How does exponential backoff work?
+184. Why is jitter required?
+185. What is Circuit Breaker?
+186. What are Closed/Open/Half-Open states?
+187. When would you use fallback?
+188. What is Bulkhead pattern?
+189. How would you prevent one slow service from consuming all threads?
+190. How would you configure timeouts?
+191. How do you distinguish transient vs permanent failures?
+192. How would you design a highly resilient payment service?
+
+---
+
+# 12. Kafka — 20
+
+193. Consumer lag continuously increases. Why?
+194. How would you reduce Kafka consumer lag?
+195. Increasing consumers doesn't reduce lag. Why?
+196. How do partitions control consumer parallelism?
+197. Can two consumers in the same group consume the same partition simultaneously?
+198. Consumer crashes after processing but before committing offset. What happens?
+199. Duplicate Kafka message arrives. How do you handle it?
+200. How would you make Kafka processing idempotent?
+201. Consumer keeps rebalancing. Why?
+202. Consumer takes too long to process one message. What happens?
+203. How would you handle poison messages?
+204. What is a Dead Letter Topic?
+205. Producer sends messages faster than consumers process them. What happens?
+206. How would you increase Kafka throughput?
+207. When would you increase partitions?
+208. Can partition count be reduced?
+209. What happens if Kafka broker goes down?
+210. How do Kafka replicas work?
+211. How do you guarantee message ordering?
+212. At-most-once vs at-least-once vs exactly-once?
+213. Kafka vs REST — when would you choose each?
+
+---
+
+# 13. Security / Spring Security / JWT — 15
+
+214. How would you secure a REST API?
+215. Authentication vs authorization?
+216. How does JWT authentication work?
+217. What happens when JWT expires?
+218. Access token vs refresh token?
+219. Where should JWT validation happen?
+220. How would you secure microservices?
+221. API Gateway authentication vs service-level authentication?
+222. How would you implement role-based authorization?
+223. What happens if a user modifies JWT payload?
+224. How do you protect passwords?
+225. How would you prevent SQL injection?
+226. What is CORS?
+227. CORS works locally but fails in production. Why?
+228. How would you prevent common API security attacks?
+
+---
+
+# 14. Testing — 10
+
+229. How would you unit test a service class?
+230. Why use Mockito?
+231. Mock vs Spy?
+232. Unit test vs integration test?
+233. How would you test a REST API?
+234. How would you test database interactions?
+235. How would you test Kafka consumers?
+236. How would you test external service failures?
+237. How would you achieve good test coverage?
+238. Tests pass locally but fail in CI/CD. How do you investigate?
+
+---
+
+# 15. React / Frontend — 15
+
+239. React page becomes slow with thousands of records. What do you do?
+240. API is called repeatedly when component renders. Why?
+241. How would you prevent unnecessary re-renders?
+242. `useEffect` executes multiple times. Why?
+243. How would you implement pagination?
+244. How would you handle API loading/error/success states?
+245. How would you handle JWT on frontend?
+246. What happens when token expires?
+247. How would frontend refresh the token?
+248. CORS error occurs from React to Spring Boot. How do you troubleshoot?
+249. How would you implement global state?
+250. Context API vs Redux?
+251. How would you optimize a large React application?
+252. How would you handle file upload?
+253. How would you protect frontend routes?
+
+---
+
+# 16. Docker / Kubernetes / CI-CD — 15
+
+254. Application works locally but Docker container fails.
+255. Docker container continuously restarts. How do you troubleshoot?
+256. Container memory reaches its limit. What happens?
+257. How would you reduce Docker image size?
+258. How would you pass configuration to Docker?
+259. Kubernetes pod is restarting. What do you check?
+260. Pod is running but traffic cannot reach it. What do you check?
+261. Readiness vs liveness?
+262. Kubernetes service vs ingress?
+263. How would you scale a microservice?
+264. What is HPA?
+265. Deployment succeeds but new version is broken. How do you rollback?
+266. Blue-green vs rolling vs canary deployment?
+267. CI pipeline fails during tests. How do you investigate?
+268. How would you design a Java CI/CD pipeline?
+
+---
+
+# 17. AWS / Cloud — 10
+
+269. Application needs to handle sudden traffic spikes. What AWS architecture would you use?
+270. EC2 vs ECS vs EKS?
+271. How would you deploy Spring Boot?
+272. Where would you store application secrets?
+273. How would you store files?
+274. How would you implement centralized logging?
+275. How would you monitor application health?
+276. Database needs high availability. What would you choose?
+277. How would you design disaster recovery?
+278. Application works in AWS locally but cannot connect to DB. How do you troubleshoot?
+
+---
+
+# 18. Observability / Production Support — 15
+
+279. Production API suddenly becomes slow.
+280. CPU reaches 95%.
+281. Memory continuously increases.
+282. DB connection pool reaches 100%.
+283. One endpoint has high latency.
+284. How would you correlate logs across microservices?
+285. What is a Trace ID?
+286. What is a Span?
+287. OpenTelemetry vs Zipkin/Jaeger/Tempo?
+288. What does Spring Boot Actuator provide?
+289. What metrics would you monitor?
+290. Logs are too noisy. How would you improve logging?
+291. One microservice produces many errors. How do you identify the root cause?
+292. How would you create an alert for increasing Kafka lag?
+293. How would you investigate an incident that happened 2 hours ago?
+
+---
